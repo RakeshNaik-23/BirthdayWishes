@@ -181,7 +181,11 @@
         }
         foot.draw();
         tree.snapshot("p2", 500, 0, 610, 680);
-        canvas.css("background", "#000");
+        canvas.animate(
+            { left: "65%" },
+            2000
+        );
+
     }));
 
     var textAnimate = eval(Jscex.compile("async", function () {
