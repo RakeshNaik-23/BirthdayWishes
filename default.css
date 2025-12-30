@@ -29,7 +29,6 @@ html, body {
 /* ===== CANVAS ===== */
 /* IMPORTANT: no transform, no scaling */
 #canvas {
-    display: block;
     position: absolute;
     left: 50%;
     top: 0;
@@ -40,10 +39,11 @@ html, body {
 /* ===== TEXT ===== */
 #text {
     position: absolute;
-    top: 80px;
-    left: 40px;
-    width: 300px;
+    top: 220px;
+    left: calc(50% - 450px); /* LEFT side of tree */
+    width: 320px;
     z-index: 10;
+    text-align: left;
 }
 
 
@@ -103,17 +103,12 @@ a {
 
 /* ===== MOBILE FIX (NO CANVAS SCALING) ===== */
 
+/* ===== MOBILE: SAME AS DESKTOP, JUST SMALLER ===== */
 @media (max-width: 768px) {
-    #canvas {
-        zoom: 0.65;          /* reduce tree size */
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    #text {
-        position: relative;
-        width: auto;
-        left: 0;
-        padding: 15px;
+    #wrap {
+        zoom: 0.3;           /* adjust: 0.55 – 0.7 if needed */
+        transform-origin: top center;
     }
 }
+
 
