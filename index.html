@@ -3,6 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>HBD love</title>	    
     <link type="text/css" rel="stylesheet" href="default.css">
     <script type="text/javascript" src="jquery.min.js"></script>
@@ -21,7 +22,7 @@
         }
     </script>
 </head>
-<body onclick="playAudio()">
+<body>
     <div id="main">
         <div id="error"><a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a> (<a href="http://firefox.com.cn/download/">Firefox</a>)</div>
         <audio height="100" width="100" id="myAudio" preload="auto">
@@ -38,8 +39,8 @@
                     <span class="say">Just saying... you're pretty awesome ❤️</span><br>
                     <span class="say">Sending good vibes and maybe a wink 😏</span><br>
                     <span class="say">Hope u have a great day today ❤️😘</span><br>
-                    <span class="say">In a sea of people, my eyes always search for you.</span><br
-                    <span class="say">                               </span><br>
+                    <span class="say">In a sea of people, my eyes always search for you.</span><br>
+                    <span class="say">                                 </span><br>
                     <span class="say">Love from Rakesh❤️😘</span><br>
                 </div>
             </div>
@@ -59,8 +60,9 @@
             return false;
         }
 
-        var width = canvas.width();
-        var height = canvas.height();        
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+
         canvas.attr("width", width);
         canvas.attr("height", height);
 
@@ -90,8 +92,8 @@
             ],
             bloom: {
                 num: 700,
-                width: 1080,
-                height: 650,
+                width: width,
+                height: height,
             },
             footer: {
                 width: 1200,
