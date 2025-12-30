@@ -1,0 +1,118 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== GLOBAL ===== */
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000;   /* BLACK background */
+    font-family: Arial, sans-serif;
+}
+
+/* ===== MAIN LAYOUT ===== */
+#main {
+    width: 100%;
+    height: 100%;
+}
+
+#wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* ===== CANVAS ===== */
+/* IMPORTANT: no transform, no scaling */
+#canvas {
+    display: block;
+    background: #000;
+}
+
+/* ===== TEXT ===== */
+#text {
+    position: absolute;
+    top: 80px;
+    left: 180px;
+    width: 280px;
+    z-index: 10;
+}
+
+#code {
+    display: none;
+    color: rgb(255, 0, 234);
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+/* ===== CLOCK ===== */
+#clock-box {
+    position: absolute;
+    left: 60px;
+    top: 550px;
+    font-size: 28px;
+    display: none;
+    color: #fff;
+}
+
+#clock-box a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ===== LINKS ===== */
+a {
+    color: #fff;
+    font-size: 14px;
+}
+
+/* ===== UTILS ===== */
+#error {
+    text-align: center;
+    margin-top: 60px;
+    display: none;
+    color: #fff;
+}
+
+.hand {
+    cursor: pointer;
+}
+
+.say {
+    margin-left: 5px;
+}
+
+/* ===== MESSAGE ===== */
+#message-box {
+    position: absolute;
+    margin-top: 450px;
+    font-size: 25px;
+    font-family: monospace;
+    color: #fff;
+}
+
+/* ===== MOBILE FIX (NO CANVAS SCALING) ===== */
+@media (max-width: 768px) {
+    #text {
+        left: 20px;
+        right: 20px;
+        width: auto;
+        top: 40px;
+    }
+
+    #code {
+        font-size: 15px;
+    }
+
+    #clock-box {
+        left: 20px;
+        top: auto;
+        bottom: 20px;
+        font-size: 16px;
+    }
+}
