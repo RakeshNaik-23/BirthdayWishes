@@ -24,11 +24,18 @@
 
     <script>
         function playAudio() {
-            var audio = document.getElementById("myAudio");
-            if (audio.paused) {
-                audio.play();
-            }
-        }
+    var audio = document.getElementById("myAudio");
+
+    audio.muted = false;
+
+    var playPromise = audio.play();
+    if (playPromise !== undefined) {
+        playPromise.catch(function () {
+            console.log("Audio blocked until user interaction");
+        });
+    }
+}
+
     </script>
 </head>
 
@@ -40,7 +47,7 @@
     </div>
 
     <!-- CLEAN AUDIO (no embed) -->
-    <audio id="myAudio" preload="auto">
+    <audio id="myAudio" preload="auto" playsinline>
         <source src="aud.mp3" type="audio/mp3">
     </audio>
 
