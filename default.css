@@ -81,3 +81,53 @@ a {
   font-family: monospace;
 
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #ffe;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+}
+
+#wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#text {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    right: 5%;
+    z-index: 10;
+}
+
+#code {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#clock-box {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
